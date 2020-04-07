@@ -1,3 +1,8 @@
+# NOT FULLY WORKING 
+# TODO: Need to find a way to source the file and test it without reboot and revert if not working
+# This file does work, ping will ping and pass/fail however pitfall is if wpa_supllicant fails 
+# you will lose the ability to ssh into PI. ** STIL TO TRY sudo wpa_cli -i wlan0 reconfigure **
+# https://www.raspberrypi.org/forums/viewtopic.php?t=198274#p1238023
 #!/bin/bash
 
 # File name and path to write too
@@ -9,8 +14,6 @@ function enter_details  {
         echo "*************************************"
         echo "*    Welcome to PI network setup    *"
         echo "*************************************"
-
-        sleep 1
 
         echo "Enter SSID: "
 
