@@ -3,7 +3,7 @@
 # File name and path to write too
 # /etc/wpa_supplicant/wpa_supplicant.conf
 FILE="test"
-ping=`ping -c 1 www.google.com | grep bytes | wc -l`
+PING=`ping -c 1 www.google.com | grep bytes | wc -l`
 
 function enter_details  {
         echo "*************************************"
@@ -42,9 +42,8 @@ check_net
 # Check Network with curl 
 # Re run if fail
 
-
 function check_net {
-        if [ "$ping" -gt 1 ];then
+        if [ "$PING" -gt 1 ];then
                 echo ">>>>>>>>> Success <<<<<<<<<<"
                 exit
         else
@@ -61,4 +60,3 @@ function check_net {
 
 # Start process
 enter_details
-  
